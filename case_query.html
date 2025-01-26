@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>陳情入口整合平台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>案件查詢</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <!-- <li><a href="index.html">最新消息</a></li> -->
+          <li><a href="chart.html">統計圖表</a></li>
+          <li><a href="#">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="query-form">
+        <h2>依案件編號查詢</h2>
+        <form action="process_query.php" method="post">
+          <label for="case_number">您的行動電話：</label>
+          <input type="text" id="case_phone" name="case_phone" required />
+
+          <label for="case_number">案件編號：</label>
+          <input type="text" id="case_number" name="case_number" required />
+
+          <label for="case_password">案件密碼：</label>
+          <input
+            type="password"
+            id="case_password"
+            name="case_password"
+            required
+          />
+
+          <label for="captcha">驗證碼：</label>
+          <div class="captcha-container">
+            <input type="text" id="captcha" name="captcha" required />
+            <img src="captcha_image.php" alt="驗證碼圖片" />
+          </div>
+
+          <button type="submit">送出查詢</button>
+        </form>
+        <p><a href="forgot_password.html">忘記案件密碼</a></p>
+      </section>
+    </main>
+  </body>
+</html>
