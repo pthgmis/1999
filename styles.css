@@ -422,7 +422,7 @@ footer {
 @media screen and (max-width: 768px) { 
   footer {
     position: relative; /* 確保文字和波浪定位一致 */
-    padding: 3rem 0; /* 增加上下內邊距，讓文字處於波浪圖形內 */
+    padding: 2rem 0; /* 增加上下內邊距，讓文字處於波浪圖形內 */
   }
 
   .footer-content {
