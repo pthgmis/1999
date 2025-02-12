@@ -455,7 +455,7 @@ footer {
 @media screen and (max-width: 768px) { 
   footer {
     position: relative; /* 確保文字和波浪定位一致 */
-    padding: 3rem 0; /* 增加上下內邊距，讓文字處於波浪圖形內 */
+    padding: 4rem 0; /* 增加上下內邊距，讓文字處於波浪圖形內 */
   }
 
   .footer-content {
@@ -471,7 +471,9 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 335px; /* 固定波浪高度，防止因文字高度影響顯示 */
+    height: auto; /* 固定波浪高度，防止因文字高度影響顯示 */
+    min-height: 280px; /* 設定最低高度，確保完整覆蓋 */
+    max-height: 100%; /* 讓波浪可以根據內容變高 */
     z-index: 0; /* 波浪在背景層 */
     pointer-events: none; /* 禁用波浪圖形的鼠標事件 */
   }
@@ -1150,3 +1152,46 @@ ul.white-dots {
     font-size: 0.8rem;
   }
 } 
+
+/* **回到頂部按鈕（圓形 + 淡藍色風格）** */
+#top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: none; /* 預設隱藏 */
+  background-color: #84b3e6; /* 🔵 主色調：淡藍色 */
+  color: white;
+  border: none;
+  border-radius: 50%; /* 圓形設計 */
+  font-size: 18px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 陰影讓按鈕不會太平面 */
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* **滾動時顯示按鈕** */
+#top-btn.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* **懸停時變色** */
+#top-btn:hover {
+  background-color: #6a9cd4; /* 🔵 稍深藍色，與主色調一致 */
+}
+
+/* **手機端適配** */
+@media screen and (max-width: 768px) {
+  #top-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+    bottom: 20px;
+    right: 15px;
+  }
+}

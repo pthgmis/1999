@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>陳情入口整合平台</title>
+    <title>屏東縣政府陳情入口整合平台</title>
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
   </head>
 
   <style>
@@ -55,14 +56,15 @@
     <!-- 頁首 -->
     <header>
       <h1>屏東縣政府陳情入口整合平台</h1>
+      <!--
       <nav>
         <ul>
           <li><a href="#">首頁</a></li>
-          <!-- <li><a href="#">最新消息</a></li> -->
+          <li><a href="#">最新消息</a></li>
           <li><a href="chart.html">統計圖表</a></li>
           <li><a href="#">聯絡我們</a></li>
         </ul>
-      </nav>
+      </nav> -->
     </header>
 
     <!-- 按鈕查詢區 -->
@@ -75,8 +77,8 @@
           縣長信箱
         </button>
         <!-- <button class="query-btn" onclick="location.href='faq.html'">常見問題集</button> -->
-        <button class="query-btn" onclick="location.href='document_query.html'">
-          公文查詢
+        <button class="query-btn" onclick="location.href='chart.html'">
+          統計圖表
         </button>
 
         <a
@@ -270,6 +272,16 @@
         loadNews();
         initModalClose();
       });
+      
     </script>
+    <!-- 回到頂部按鈕 -->
+<button id="top-btn" onclick="scrollToTop()">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- 引入 Font Awesome 圖標庫 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
   </body>
 </html>
