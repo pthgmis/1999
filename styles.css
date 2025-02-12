@@ -474,6 +474,7 @@ footer {
     height: auto; /* 固定波浪高度，防止因文字高度影響顯示 */
     min-height: 280px; /* 設定最低高度，確保完整覆蓋 */
     max-height: 100%; /* 讓波浪可以根據內容變高 */
+
     z-index: 0; /* 波浪在背景層 */
     pointer-events: none; /* 禁用波浪圖形的鼠標事件 */
   }
