@@ -287,6 +287,53 @@ main {
 .content ul li {
   margin-bottom: 0.5rem;
 }
+/* 通報專線區域樣式 */
+.table-container {
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* **標題樣式** */
+.table-container h2 {
+  color: #386641; /* 深綠色標題 */
+  margin-bottom: 1rem;
+}
+
+/* **表格樣式** */
+.table-container table {
+  width: 100%;
+  border-collapse: collapse; /* 移除表格內邊距 */
+}
+
+/* **表格標題（`th`） & 內容（`td`）** */
+.table-container th,
+.table-container td {
+  text-align: center; /*文字水平置中 */
+  vertical-align: middle; /* 文字垂直置中 */
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* **表頭樣式** */
+.table-container th {
+  background-color: #84b3e6; /*表頭背景色 */
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* **隔行背景變色，提升可讀性** */
+.table-container tr:nth-child(even) {
+  background-color: #f9f9f9; /*隔行變灰色 */
+}
+
+/* **懸停效果** */
+.table-container tr:hover {
+  background-color: #dff1ff; /*滑鼠懸停變色 */
+}
+
 
 /* 勾選區樣式 */
 .agreement-form {
@@ -1127,20 +1174,30 @@ ul.white-dots {
 /* 響應式處理 */
 @media (max-width: 768px) {
   .chart-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 單欄顯示 */
+    padding: 0.5rem; /* 減少邊距 */
+    gap: 1rem; /* 降低間距 */
   }
-  
+
   .chart-wrapper {
-    padding: 1rem;
+    padding: 0.8rem; /* 避免內距過大影響佈局 */
+  }
+
+  .chart-wrapper h2 {
+    font-size: 1rem; /* 手機端標題稍微縮小 */
+  }
+
+  .chart-wrapper canvas {
+    max-width: 100%; /* 確保圖表自適應 */
   }
 }
 /*公文查詢系統下方聲明 */
 
 /* 聲明文字樣式 */
 .statement-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.8; /* 提升文字可讀性 */
-  color: #333; /* 深灰色文字 */
+  color: #386641; /* 深灰色文字 */
   margin: 0; /* 去除默認外邊距 */
   text-align: center; /* 將文字居中對齊 */
 }
@@ -1153,7 +1210,7 @@ ul.white-dots {
   }
 } 
 
-/* **回到頂部按鈕（圓形 + 淡藍色風格）** */
+/* **回到頂部按鈕** */
 #top-btn {
   position: fixed;
   bottom: 30px;
@@ -1161,7 +1218,7 @@ ul.white-dots {
   width: 50px;
   height: 50px;
   display: none; /* 預設隱藏 */
-  background-color: #84b3e6; /* 🔵 主色調：淡藍色 */
+  background-color: #84b3e6; 
   color: white;
   border: none;
   border-radius: 50%; /* 圓形設計 */
@@ -1182,7 +1239,7 @@ ul.white-dots {
 
 /* **懸停時變色** */
 #top-btn:hover {
-  background-color: #6a9cd4; /* 🔵 稍深藍色，與主色調一致 */
+  background-color: #6a9cd4; 
 }
 
 /* **手機端適配** */
