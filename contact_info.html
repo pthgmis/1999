@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>陳情入口整合平台</title>
+    <title>屏東縣政府陳情入口整合平台</title>
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
@@ -16,27 +17,81 @@
       <h1>其他相關通報專線</h1>
       <nav>
         <ul>
-          <li><a href="index.html">首頁</a></li>
-          <!-- <li><a href="index.html">最新消息</a></li> -->
-          <li><a href="chart.html">統計圖表</a></li>
-          <li><a href="#">聯絡我們</a></li>
+          <li><a href="index.html">返回首頁</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- 主要內容 -->
     <main>
-      <section class="content">
+      <section class="table-container">
         <h2>其他相關通報專線</h2>
-        <p>
-            交通違規案件舉發請至本府警察局交通隊「交通違規舉發網站」填報。<br>
-            有關貪瀆不法案件，請向本府政風單位檢舉，政風檢舉專線08-7335620，檢舉信箱doge@ems.pthg.gov.tw。<br>
-            環安專線：0800-066666、08-7351928。<br>
-            家庭暴力及性侵害求助與通報，您可撥打110報警及113保護專線協助，也可以利用「關懷e起來」進行線上通報（https://ecare.mohw.gov.tw/）。<br>
-            如為緊急案件或犯罪事件，請撥打110。火警及救難事件，請撥打119。
-        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>服務項目</th>
+              <th>服務專線</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>緊急報案及交通事故</td>
+              <td>110</td>
+            </tr>
+            <tr>
+              <td>救災救護</td>
+              <td>119</td>
+            </tr>
+            <tr>
+              <td>環安專線</td>
+              <td>0800-066666<br>08-7351928
+                </td>
+            </tr>
+            <tr>
+              <td>動物保護專線</td>
+              <td>1959</td>
+            </tr>
+            <tr>
+              <td>食安專線</td>
+              <td>08-7362596</td>
+            </tr>
+            <tr>
+              <td>消費申訴專線</td>
+              <td>1950</td>
+            </tr>
+            <tr>
+              <td>勞資爭議諮詢調解</td>
+              <td>08-7558048#305、310</td>
+            </tr>
+            <tr>
+              <td>113保護專線<br>(家庭暴力、兒童保護、性侵害及性騷擾)
+                </td>
+              <td>113</td>
+            </tr>
+            <tr>
+              <td>長期照護幫您專線</td>
+              <td>1966</td>
+            </tr>
+            <tr>
+              <td>菸害防制專線</td>
+              <td>08-7385372</td>
+            </tr>
+            <tr>
+              <td>政風貪瀆不法檢舉</td>
+              <td>08-7335620</td>
+            </tr>
+          </tbody>
+        </table>
 
       </section>
     </main>
+        <!-- 回到頂部按鈕 -->
+<button id="top-btn" onclick="scrollToTop()">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- 引入 Font Awesome 圖標庫 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
   </body>
 </html>
