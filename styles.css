@@ -734,7 +734,19 @@ table caption {
   background-color: #3e8e41; /* 按下效果 */
   transform: scale(0.98);
 }
+/*禁用狀態*/
+.query-form button:disabled {
+  background-color: #ccc !important; /* 淺灰色代表禁用 */
+  color: #777; /* 文字變淡 */
+  cursor: not-allowed; /* 滑鼠變成禁止符號 */
+  transform: none; /* 禁止縮放效果 */
+}
 
+/* 禁用時不應有懸停效果 */
+.query-form button:disabled:hover {
+  background-color: #ccc !important;
+  transform: none;
+}
 .query-form p {
   margin-top: 1rem;
   text-align: right;
@@ -1342,3 +1354,42 @@ ul.white-dots {
   line-height: 1.5; 
   margin-bottom: 1rem; 
 }
+
+.email-input-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  width: 100%; 
+}
+
+.email-input-container input {
+  flex: 3; 
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.send-code-btn {
+  flex: 1; 
+  padding: 6px 8px;
+  font-size: 0.8rem; 
+  white-space: nowrap; 
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed; /* 預設禁用 */
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.send-code-btn:enabled {
+  cursor: pointer;
+  background-color: #45a049;
+}
+
+.send-code-btn:enabled:hover {
+  background-color: #3e8e41;
+}
+

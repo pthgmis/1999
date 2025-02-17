@@ -241,6 +241,11 @@
       form.style.display = "none";
       formTitle.style.display = "none";
       countdownElement.style.display = "none"; // 隱藏倒數時間
+      // **隱藏提示文字**
+const formNote = document.querySelector(".form-note");
+if (formNote) {
+    formNote.style.display = "none"; // 隱藏提示訊息
+}
 
       // **顯示成功訊息**
       const successMessage = document.createElement("div");
