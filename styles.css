@@ -36,7 +36,7 @@ header::after {
   content: '';
   position: absolute;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
   animation: float 6s ease-in-out infinite;
 }
 
@@ -131,6 +131,7 @@ header h1 {
   line-height: 1.5;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 20px 0;
+  z-index: 1;
 }
 
 /* 頁首導航 */
@@ -839,7 +840,7 @@ table caption {
 .compose-form textarea,
 .compose-form button {
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -1245,4 +1246,99 @@ ul.white-dots {
     bottom: 20px;
     right: 15px;
   }
+}
+/* 信箱自動填寫欄位 */
+.email-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333; /* 深色文字 */
+  margin-bottom: 10px;
+}
+/* 附件說明文字 (小字體 + 灰色) */
+.file-note {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* 附件上傳容器 */
+.file-upload-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 欄位之間的間距 */
+  flex-wrap: wrap; /* 避免畫面太窄時擠在一起 */
+}
+
+/* 附件上傳欄位 (縮小大小) */
+.file-upload-container input[type="file"] {
+  width: 120px; /* 設定固定寬度 */
+  font-size: 0.85rem; /* 字體縮小 */
+  padding: 5px;
+}
+/* 必填標記 */
+.required {
+  color: red;
+  font-weight: bold;
+  margin-right: 4px; /* 讓 * 與文字之間有點距離 */
+}
+
+.address-container {
+  display: flex;
+  align-items: center; /* 垂直置中 */
+  gap: 8px; /* 選單、地址輸入框之間的間距 */
+  flex-wrap: nowrap; /* 保持同一行 */
+}
+
+.fixed-text {
+  white-space: nowrap; 
+}
+
+#township {
+  width: 90px; 
+}
+
+#case-address {
+  flex-grow: 1; /* 讓輸入框自適應寬度 */
+  min-width: 200px; /* 避免輸入框過小 */
+}
+/* 倒數計時文字樣式 */
+.countdown-timer {
+  font-size: 1rem; 
+  font-weight: bold; 
+  color: #386641; 
+  text-align: center;
+  margin-top: 10px;
+}
+/* 成功訊息樣式 */
+.success-message {
+  background: #e8f5e9; /* 淡綠色背景 */
+  color: #2e7d32; /* 深綠色文字 */
+  font-size: 1rem;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* 讓按鈕提交後消失 */
+.success-message + .submit-btn {
+  display: none;
+}
+/* 成功訊息文字排版 */
+.align-left {
+  text-align: left; 
+}
+
+.align-right {
+  text-align: right; 
+  margin-top: 10px; 
+  font-weight: bold; 
+}
+/* 填寫提示 */
+.form-note {
+  font-size: 0.85rem; 
+  color: #666; 
+  line-height: 1.5; 
+  margin-bottom: 1rem; 
 }

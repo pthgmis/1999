@@ -65,6 +65,16 @@
           </button>
         </form>
       </section>
+      <script>
+        document.getElementById("confirm-btn").addEventListener("click", function () {
+          const email = document.getElementById("email").value;
+          if (email) {
+            localStorage.setItem("verifiedEmail", email); // 存儲已驗證信箱
+            window.location.href = "compose_mail.html"; // 跳轉至撰寫信件頁面
+          }
+        });
+      </script>
+      
     </main>
   </body>
 </html>
