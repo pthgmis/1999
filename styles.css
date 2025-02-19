@@ -127,11 +127,12 @@ header .circle:nth-child(4) {
 /* 頁首標題 */
 header h1 {
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 1.5;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 20px 0;
-  z-index: 1;
+  position: relative;
+  z-index: 15;
 }
 
 /* 頁首導航 */
@@ -148,7 +149,7 @@ header nav ul {
 
 header nav a {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   margin: 0 10px;
@@ -184,7 +185,7 @@ header nav a:hover {
 .query-btn {
   background: linear-gradient(135deg, #52B788, #F4A261); 
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   font-weight: bold;
   padding: 12px 20px;
   border: none;
@@ -216,7 +217,7 @@ header nav a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
   z-index: 1000;
-  width: 200px;
+  min-width: 100%; 
 }
 
 .dropdown:hover .dropdown-menu {
@@ -224,6 +225,7 @@ header nav a:hover {
 }
 
 .dropdown-item {
+  font-size: 1.2rem; 
   background-color: rgba(255, 255, 255, 0.8); 
   color: #386641;
   font-weight: bold;
@@ -999,6 +1001,7 @@ table caption {
 .button-link {
   text-decoration: none; /* 移除下劃線 */
   color: inherit; /* 繼承文字顏色 */
+  display: inline-block;
 }
 
 /* 圖標圓形容器 */
