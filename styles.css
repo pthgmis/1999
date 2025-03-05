@@ -1310,7 +1310,21 @@ ul.white-dots {
 
 #township {
   width: 90px; 
+  font-size: 1rem;
 }
+#township option {
+  font-size: 1rem;  
+}
+/* 意見內容註解 */
+
+.content-note {
+  font-size: 0.85rem; /* 字體較小 */
+  color: #1e5079; 
+  display: block; 
+  margin-top: 3px;
+  line-height: 1.5;
+}
+
 
 #case-address {
   flex-grow: 1; /* 讓輸入框自適應寬度 */
