@@ -91,7 +91,11 @@
             labels: {
               usePointStyle: true,
               boxWidth: 10,
-              padding: 15
+              padding: 15,
+              font: ctx => {
+  return {
+    size: ctx.chart.width < 480 ? 14 : 22
+  };}
             }
           },
           tooltip: {
@@ -152,11 +156,16 @@
   options: {
     indexAxis: "y",
     responsive: true,
+    layout: {
+  padding: {
+    right: 40 // 增加右側空間，防止數字被裁切
+  }
+},
     plugins: {
       legend: { display: false },
       datalabels: {
         anchor: "end",
-        align: "start", 
+        align: "end", 
         clamp: true, 
         formatter: value => `${value}`,
         color: "#333",

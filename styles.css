@@ -145,6 +145,21 @@ header h1 {
   height: 70px;
   object-fit: contain;
 }
+/* 手機端調整 */
+@media (max-width: 768px) {
+  .logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+  }
+
+  .logo-img {
+    height: 30px; /* 手機縮小 logo 大小 */
+  }
+}
+
+
 /* 頁首導航 */
 header nav ul {
   list-style: none;
@@ -1051,10 +1066,11 @@ table caption {
 /* 針對行動裝置的媒體查詢 */
 @media (max-width: 768px) {
   .icon-button-section {
-    display: flex;
-    flex-wrap: wrap; /* 允許換行 */
-    justify-content: center; /* 水平居中 */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 每列兩個 */
+    gap: 1rem;
     padding: 10px;
+    justify-items: center; /* 水平置中 */
   }
 
   .icon-button {
@@ -1083,6 +1099,7 @@ table caption {
     font-size: 16px;
     color: #333;
     text-align: center; /* 文字居中 */
+    word-break: keep-all;
   }
 }
 
@@ -1191,11 +1208,12 @@ ul.white-dots {
   height: 100% !important; /* 強制撐滿父容器高度 */
   max-height: unset;       /* 移除 280px 限制 */
 }
-
-
 .chart-wrapper h2 {
-  font-size: 1rem; /* 縮小標題字體 */
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333; /* 可選：讓標題更清晰 */
 }
+
 
 
 /* 響應式處理 */
@@ -1218,6 +1236,25 @@ ul.white-dots {
     max-width: 100%; /* 確保圖表自適應 */
   }
 }
+@media (max-width: 768px) {
+  #typeChartWrapper {
+    max-width: 100%;
+    padding: 0.5rem;
+    overflow-x: auto; /* 若仍超寬，允許橫向滑動 */
+  }
+
+  #typeChart {
+    max-width: 320px;
+    height: auto;
+  }
+
+  /* 限制圖例區塊的字體大小與不換行 */
+  .chartjs-legend li {
+    font-size: 0.75rem !important;
+    white-space: nowrap;
+  }
+}
+
 .chart-selector {
   display: flex;
   align-items: center;
