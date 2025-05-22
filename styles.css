@@ -1063,6 +1063,7 @@ table caption {
 }
 
 
+
 /* 針對行動裝置的媒體查詢 */
 @media (max-width: 768px) {
   .icon-button-section {
@@ -1184,6 +1185,14 @@ ul.white-dots {
   padding: 20px;
 }
 
+#typeChartWrapper {
+  height: 560px; /* 高度 */
+}
+
+#typeChart {
+  max-height: 100%; /* 確保 canvas 不超出容器 */
+}
+
 /* 圖表容器樣式 */
 .chart-container {
   display: flex;
@@ -1225,7 +1234,7 @@ ul.white-dots {
   }
 
   .chart-wrapper {
-    padding: 0.8rem; /* 避免內距過大影響佈局 */
+    padding: 0 1rem; /* 避免內距過大影響佈局 */
   }
 
   .chart-wrapper h2 {
@@ -1233,7 +1242,8 @@ ul.white-dots {
   }
 
   .chart-wrapper canvas {
-    max-width: 100%; /* 確保圖表自適應 */
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 @media (max-width: 768px) {

@@ -95,15 +95,20 @@
             }]
           },
           options: {
-            responsive: true,
-            cutout: "82%",
-            plugins: {
-              legend: {
-                position: "right",
-                labels: {
-                  usePointStyle: true,
-                  boxWidth: 10,
-                  padding: 15,
+  responsive: true,
+  cutout: "82%",
+  maintainAspectRatio: false,
+  aspectRatio: 1.5, 
+
+  plugins: {
+    legend: {
+      position: "right",
+      position: window.innerWidth < 768 ? "bottom" : "right",
+      align: "start",
+      labels: {
+        usePointStyle: true,
+        boxWidth: 10,
+        padding: 30, 
                   font: ctx => {
   return {
     size: ctx.chart.width < 480 ? 12: 22
@@ -186,7 +191,7 @@
                 color: "#333",
                 font: {
                   weight: "bold",
-                  size: 12
+                  size: 15
                 }
               }
             },
@@ -200,7 +205,10 @@
               },
               y: {
                 ticks: {
-                  color: "#333"
+                  color: "#333",
+                  font: {
+      size: window.innerWidth < 768 ? 12 : 20 
+    }
                 }
               }
             }
@@ -247,7 +255,7 @@
                 color: "#333",
                 font: {
                   weight: "bold",
-                  size: 12
+                  size: 15
                 }
               }
             },
@@ -262,7 +270,11 @@
               y: {
                 ticks: {
                   color: "#333",
-                  autoSkip: false // 確保顯示所有標籤
+                  
+                  autoSkip: false,
+                  font: {
+        size: 16
+      }
                 }
               }
             }
